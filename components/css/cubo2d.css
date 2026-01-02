@@ -1,0 +1,77 @@
+.cena {
+    width: 300px;
+    height: 300px;
+    margin: 60px auto;
+
+    display: grid;
+    place-items: center;
+    background: rgb(41, 41, 41);
+    perspective: 200px;
+}
+
+.quadrado {
+    width: 150px;
+    height: 150px;
+
+    background-color: antiquewhite;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    border-radius: 8px;
+
+    transform-style: preserve-3d;
+}
+
+/* Quadrado girando no plano normal (Z) */
+.eixoZ {
+    background: #ef4444;
+    /* vermelho */
+    animation: girarZ 3s linear infinite;
+}
+
+@keyframes girarZ {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Quadrado girando no eixo X */
+.eixoX {
+    background: #3b82f6;
+    /* azul */
+    animation: girarX 3s linear infinite;
+}
+
+@keyframes girarX {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+/* Quadrado girando no eixo Y */
+.eixoY {
+    background: #22c55e;
+    /* verde */
+    animation: girarY 3s linear infinite;
+}
+
+@keyframes girarY {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}

@@ -1,0 +1,15 @@
+import VideoCarousel from "@/components/VideoCarousel";
+import Aula01_3D from "@/components/Cubo3D";
+import Cubo2D_v1 from "@/components/Cubo2D";
+import Cubo2D_v2 from "@/components/Cubo2D_v2";
+
+export default function Home() {
+  const videos = ["/videos/v1.mp4", "/videos/v2.mp4", "/videos/v3.mp4"];
+
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-900">
+      {/* <VideoCarousel videos={videos} /> */}
+      <Cubo2D_v2 />
+    </div>
+  );
+}
