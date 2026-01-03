@@ -1,0 +1,81 @@
+.table3D {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(32, 32, 32);
+    perspective: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cube3D {
+    width: 200px;
+    height: 200px;
+    background: rgb(253, 215, 45);
+
+    transform-style: preserve-3d;
+    animation: animationCubo3D 3s ease-in-out infinite;
+    transform: rotateY(0deg) rotateX(60deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+@keyframes animationCubo3D {
+    0% {
+        transform: rotateX(0deg) rotateY(30deg) rotate3d(1, 1, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+
+    50% {
+        transform: rotateX(45deg) rotateY(180deg) rotate3d(1, 1, 0, 180deg) translate3d(200px, 200px, 50px);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotate3d(1, 1, 0, 0deg) translate3d(0px, 0px, 0px);
+    }
+}
+
+.cube3D>.face {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.cube3D .front {
+    background: red;
+    transform: translateX(0px) translateZ(100px);
+}
+
+.cube3D .back {
+    background: rgb(56, 56, 56);
+
+    transform: rotateY(-180deg) translateZ(100px);
+}
+
+
+.cube3D .left {
+    background: rgb(134, 255, 103);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+
+.cube3D .right {
+    background: rgb(9, 239, 255);
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+
+.cube3D .top {
+    background: rgb(255, 107, 151);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+
+.cube3D .bottom {
+    background: rgb(186, 66, 255);
+    transform: rotateX(-90deg) translateZ(100px);
+}
