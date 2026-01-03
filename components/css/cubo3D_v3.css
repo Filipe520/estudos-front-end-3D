@@ -1,0 +1,80 @@
+/* Palco = cenário com perspectiva */
+.palco {
+    width: 300px;
+    height: 300px;
+    margin: 60px auto;
+    perspective: 3000px;
+    /* profundidade da câmera */
+
+    background-color: #080e13;
+}
+
+/* Cubo = container que segura as faces */
+@keyframes AnimationCubo3D {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg) translate3d(100px, 0, 0);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg) translate3d(100px, 0, 0);
+    }
+}
+
+.cubo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* mantém os filhos em 3D */
+    transform: rotateX(-20deg) rotateY(20deg);
+
+    animation: AnimationCubo3D 3s ease-in-out infinite;
+    /* giro inicial */
+}
+
+
+/* Face = cada lado do cubo */
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    opacity: 0.9;
+    border: 2px solid #111;
+}
+
+/* Cada lado com cor e posição */
+.frente {
+    background: rgb(255, 0, 128);
+    transform: translateZ(100px);
+}
+
+.tras {
+    background: blue;
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.direita {
+    background: green;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.esquerda {
+    background: orange;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cima {
+    background: purple;
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.baixo {
+    background: pink;
+    transform: rotateX(-90deg) translateZ(100px);
+}
