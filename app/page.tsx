@@ -6,6 +6,7 @@ import Cubo3D from "@/components/Cubo3D_v3";
 import CuboGiratorio from "@/components/CuboGiratorio";
 import Card3D from "@/components/Card3D";
 import Galeria3D from "@/components/Galeria3D";
+import Piramide3D from "@/components/Piramide3D";
 
 export default function Home() {
   const videos = ["/videos/v1.mp4", "/videos/v2.mp4", "/videos/v3.mp4"];
@@ -16,7 +17,7 @@ export default function Home() {
         Laboratório 3D
       </h1>
       {/* <VideoCarousel videos={videos} /> */}
-      <Galeria3D />
+      <Piramide3D />
     </div>
   );
 }
