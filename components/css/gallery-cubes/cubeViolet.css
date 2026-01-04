@@ -1,0 +1,58 @@
+@keyframes animationCubeVioletCombo {
+    from {
+        transform: rotateX(0deg) rotate3d(1, 1, 0, 0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotate3d(1, 1, 0, 360deg);
+    }
+}
+
+.mesa3D>.cubeViolet {
+    width: 200px;
+    height: 200px;
+
+    background-color: rgb(132, 0, 255);
+    transform-style: preserve-3d;
+
+    position: relative;
+
+    transform: rotateY(0deg) rotateX(0deg);
+    animation: animationCubeVioletCombo 6s linear infinite;
+}
+
+
+
+.cubeViolet .front {
+    background-color: rgb(132, 0, 255);
+
+    transform: translateZ(100px)
+}
+
+.cubeViolet .back {
+    background-color: rgb(132, 0, 255);
+    transform: rotateY(-180deg) translateZ(100px);
+}
+
+
+.cubeViolet .left {
+    background-color: rgb(132, 0, 255);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+
+.cubeViolet .right {
+    background-color: rgb(132, 0, 255);
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+
+.cubeViolet .top {
+    background-color: rgb(132, 0, 255);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cubeViolet .bottom {
+    background-color: rgb(132, 0, 255);
+    transform: rotateX(-90deg) translateZ(100px);
+}

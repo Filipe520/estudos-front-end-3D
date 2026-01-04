@@ -1,0 +1,58 @@
+.mesa3D>.cubeRed {
+    width: 200px;
+    height: 200px;
+
+    background-color: rgb(255, 0, 0);
+    transform-style: preserve-3d;
+
+    color: rgb(158, 253, 110);
+
+    position: relative;
+    animation: animationCubeRed 5s linear infinite;
+}
+
+@keyframes animationCubeRed {
+
+    0%,
+    100% {
+        transform: rotateX(0deg) rotateX(0deg) translateY(0);
+    }
+
+    50% {
+        transform: rotateX(360deg) rotateX(0deg) translateY(-100);
+    }
+}
+
+.cubeRed .front {
+    background-color: rgb(255, 83, 83);
+
+    transform: translateZ(100px)
+}
+
+.cubeRed .back {
+    background-color: rgb(255, 83, 83);
+    transform: rotateY(-180deg) translateZ(100px);
+}
+
+
+.cubeRed .left {
+    background-color: rgb(255, 83, 83);
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+
+.cubeRed .right {
+    background-color: rgb(255, 83, 83);
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+
+.cubeRed .top {
+    background-color: rgb(255, 83, 83);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cubeRed .bottom {
+    background-color: rgb(255, 83, 83);
+    transform: rotateX(-90deg) translateZ(100px);
+}
